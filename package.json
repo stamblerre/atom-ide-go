@@ -1,0 +1,36 @@
+{
+  "name": "atom-ide-go",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Go language support for Atom",
+  "keywords": [],
+  "repository": "https://github.com/stamblerre/atom-ide-go",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-languageclient": "^0.9.9"
+  },
+  "enhancedScopes": [
+    "source.go"
+  ],
+  "configSchema": {
+    "command": {
+      "title": "Path to Go language server binary",
+      "order": 1,
+      "type": "string",
+      "default": "gopls",
+      "description": "Name or absolute path of your Go language server binary. Defaults to gopls."
+    },
+    "flags": {
+      "title": "Flags to pass to the Go language server",
+      "order": 1,
+      "type": "array",
+      "default": [
+        "-rpc.trace"
+      ],
+      "description": "Flags to pass to Go language server binary."
+    }
+  }
+}
